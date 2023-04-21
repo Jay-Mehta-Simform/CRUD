@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-image: linear-gradient(to left, #00c6fb 0%, #005bea 100%);
+}
+
+.addCardMould {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.addCardMould form {
+	font-family: "Comfortaa", cursive;
+	font-size: 1.3rem;
+	height: 450px;
+	width: 450px;
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: #ffffff;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.addCardMould input,
+.addCardMould textarea {
+	border: 1px solid grey;
+	border-radius: 5px;
+	font-family: inherit;
+	font-size: 1.15rem;
+	width: 100%;
+	outline: none;
+	resize: none;
+	padding: 5px;
+}
+
+.addCardMould input[type="file"] {
+	border: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.addCardMould input::-webkit-outer-spin-button,
+.addCardMould input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+.addCardMould input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.addCardMould textarea {
+	height: 25%;
+}
+
+.addCardMould .imageInput {
+	flex-direction: column;
+	height: 25%;
+}
+
+.addCardMould .thumbnail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 75%;
+	object-fit: contain;
+}
+
+.addCardMould .thumbnail img {
+	height: 100%;
+	object-fit: contain;
+}
+
+.btn,
+.back {
+	width: 25%;
+	margin: 0 auto;
+	color: white;
+	border: none;
+	font-size: 1.5rem;
+	padding: 7px;
+	border-radius: 3px;
+	background: linear-gradient(90deg, #202627 0%, #3a47d5 100%);
+
+	background-image: linear-gradient(
+		to right,
+		#d31027 0%,
+		#ea384d 51%,
+		#d31027 100%
+	);
+	text-transform: uppercase;
+	transition: 0.2s;
+	background-size: 200% auto;
+}
+.btn:hover,
+.back:hover {
+	background-position: right center; /* change the direction of the change here */
+	transform: scale(1.1);
+}
+
+.back {
+	margin-top: 25px;
+}
+
+@media screen and (max-width: 950px) {
+	* {
+		font-size: 12px;
+	}
+	body {
+		flex-direction: column;
+		gap: 5px;
+		padding: 5px;
+	}
+	.addCardMould form {
+		height: 400px;
+		width: 400px;
+	}
+	.entriesContainer {
+		height: 400px;
+		width: 400px;
+	}
+}
+@media screen and (max-width: 950px) and (max-height: 850px) {
+	* {
+		font-size: 12px;
+	}
+	.addCardMould form {
+		height: 300px;
+		width: 300px;
+	}
+	.entriesContainer {
+		height: 300px;
+		width: 300px;
+	}
+}

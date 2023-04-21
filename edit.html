@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="./edit.css">
+</head>
+
+<body>
+    <div class="addCardMould">
+        <form action="">
+            <input required type="number" placeholder="Enter Product ID" value="123" id="productId" disabled>
+            <input required type="text" placeholder="Enter Product Name" value="Demo" id="productName">
+            <div class="imageInput">
+                <input required type="file" placeholder="Select Image" id="image" accept="image/*">
+                <div class="thumbnail">
+                    <img src="" alt="Preview Here">
+                </div>
+            </div>
+            <input required type="number" placeholder="Enter Price" value="123" id="price">
+            <textarea type="text" id="description" placeholder="Enter Description" id="description"
+                pattern="[a-zA-Z0-9\s]+">Nothing In Here</textarea>
+            <button id="edit" class="btn">Edit</button>
+        </form>
+        <button class="back">Return</button>
+    </div>
+    <script src="./functions.js"></script>
+    <script src="./edit.js"></script>
+</body>
+
+</html>

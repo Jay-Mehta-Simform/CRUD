@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+	font-family: "Comfortaa", cursive;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+.addCardMould {
+	margin: auto;
+}
+
+.addCardMould form {
+	font-family: "Comfortaa", cursive;
+	font-size: 1.3rem;
+	height: 450px;
+	width: 450px;
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: #ffffff;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.addCardMould input,
+.addCardMould textarea {
+	border: 1px solid grey;
+	border-radius: 5px;
+	font-family: inherit;
+	font-size: 1.15rem;
+	width: 100%;
+	outline: none;
+	resize: none;
+	padding: 5px;
+}
+
+.addCardMould input[type="file"] {
+	border: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.addCardMould textarea {
+	height: 25%;
+}
+
+.addCardMould .imageInput {
+	flex-direction: column;
+	height: 25%;
+}
+
+.addCardMould .thumbnail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 75%;
+	object-fit: contain;
+}
+
+.addCardMould .thumbnail img {
+	height: 100%;
+	object-fit: contain;
+}
+
+.btn {
+	width: 25%;
+	margin: 0 auto;
+	color: white;
+	border: none;
+	font-size: 1.5rem;
+	padding: 7px;
+	border-radius: 3px;
+	background: linear-gradient(90deg, #202627 0%, #3a47d5 100%);
+
+	background-image: linear-gradient(
+		to right,
+		#d31027 0%,
+		#ea384d 51%,
+		#d31027 100%
+	);
+	text-transform: uppercase;
+	transition: 0.2s;
+	background-size: 200% auto;
+}
+.btn:hover {
+	background-position: right center; /* change the direction of the change here */
+}
+
+.btn:hover {
+	transform: scale(1.1);
+}
+
+/* Display Entries */
+
+.entriesContainer {
+	margin: auto;
+	font-family: "Comfortaa", cursive;
+	font-size: 1.3rem;
+	height: 450px;
+	width: 450px;
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	background-color: #8400ffad;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.sortBy {
+	display: flex;
+	align-items: center;
+}
+
+.sortBy .filter {
+	margin-left: auto;
+	height: 100%;
+}
+
+.filter input {
+	font-size: 1.2rem;
+	padding: 5px;
+	outline: none;
+}
+
+.sortBy:first-child {
+	color: white;
+}
+
+#sortBySelect {
+	outline: none;
+	display: inline-block;
+	font-size: 1.2rem;
+	padding: 5px;
+}
+
+.displayEntries {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.details {
+	display: flex;
+	justify-content: space-between;
+}
+
+.displayEntries::-webkit-scrollbar {
+	display: none;
+}
+
+.entry {
+	border-radius: 3px;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	gap: 3px;
+	height: fit-content;
+	background-color: #ffffff;
+}
+
+.entry .actions {
+	border-top: 2px solid rgb(255, 0, 0);
+	padding-top: 5px;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	cursor: pointer;
+}
+
+.entry svg {
+	height: 30px;
+	pointer-events: none;
+}
+
+@media screen and (max-width: 950px) {
+	* {
+		font-size: 12px;
+	}
+	body {
+		flex-direction: column;
+		gap: 5px;
+		padding: 5px;
+	}
+	.addCardMould form {
+		height: 400px;
+		width: 400px;
+	}
+	.entriesContainer {
+		height: 400px;
+		width: 400px;
+	}
+}
+@media screen and (max-width: 950px) and (max-height: 850px) {
+	* {
+		font-size: 12px;
+	}
+	.addCardMould form {
+		height: 300px;
+		width: 300px;
+	}
+	.entriesContainer {
+		height: 300px;
+		width: 300px;
+	}
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <script defer src="./functions.js"></script>
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="addCardMould">
+        <form id="form" action="">
+            <input required type="number" placeholder="Enter Product ID" id="productId">
+            <input required type="text" autocomplete="off" placeholder="Enter Product Name" id="productName">
+            <div class="imageInput">
+                <input required type="file" placeholder="Select Image" id="image" accept="image/*">
+                <div class="thumbnail">
+                    <img src="" alt="Preview Here">
+                </div>
+            </div>
+            <input required type="number" placeholder="Enter Price" id="price">
+            <textarea type="text" id="description" placeholder="Enter Description" id="description"></textarea>
+            <button id="submit" type="submit" form="form" class="btn">Submit</button>
+        </form>
+    </div>
+    <div class="entriesContainer">
+        <div class="sortBy">
+            <label for="sortBySelect">Sort By :</label>
+            <select name="sortBySelect" id="sortBySelect">
+                Sort By
+                <option value="id">ID</option>
+                <div class="details">
+                    <option value="name">Name</option>
+                    <option value="price">Price</option>
+                </div>
+            </select>
+            <div class="filter">
+                <input type="number" placeholder="Find By ID" class="filterId">
+            </div>
+        </div>
+        <div class="displayEntries">
+            <div class="entry">
+                <span>Id : ${currentKey}</span>
+                <span>Name : ${currentKey}</span>
+                <span>Price : ${currentKey}</span>
+                <div class="actions">
+                    <div class="edit">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.6878 3.00154L20.9985 6.3122L12.3107 15H9V11.6893L17.6878 3.00154ZM17.6878 5.12286L10.5 12.3107V13.5H11.6893L18.8771 6.3122L17.6878 5.12286ZM5 5H12V6.5H6.5V17.5H17.5V12H19V19H5V5Z"
+                                    fill="#1F2328"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="view">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.7703 12C20.7703 11.6412 20.5762 11.4056 20.188 10.9343C18.768 9.21014 15.6357 6 12 6C8.36428 6 5.23207 9.21014 3.81198 10.9343C3.42382 11.4056 3.22974 11.6412 3.22974 12C3.22974 12.3588 3.42382 12.5944 3.81198 13.0657C5.23207 14.7899 8.36428 18 12 18C15.6357 18 18.768 14.7899 20.188 13.0657C20.5762 12.5944 20.7703 12.3588 20.7703 12ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3432 9 9.00002 10.3431 9.00002 12C9.00002 13.6569 10.3432 15 12 15Z"
+                                    fill="#33363F"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="delete">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M10 12V17" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M14 12V17" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M4 7H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
